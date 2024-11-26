@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      .container {
+        max-width: 75%;
+        padding: 2rem 1rem;
+        margin: 0 auto;
+      }
+      a {
+        text-decoration: none;
+      }
+      .header_container {
+        margin-bottom: 2.8rem;
+      }
+
+      .title {
+        margin-bottom: 1rem;
+        font-size: 1.7rem;
+        line-height: 2rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .description {
+        text-align: center;
+        color: rgb(97, 95, 95);
+        max-width: 568px;
+        margin: 0 auto;
+      }
+      .main_container {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @media (min-width: 650px) {
+        .main_container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 1080px) {
+        .main_container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (min-width: 1340px) {
+        .main_container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .card_container {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(234, 229, 229);
+        border-radius: 8px;
+      }
+      .card_img_container {
+        position: relative;
+        overflow: hidden;
+        height: 7rem;
+      }
+
+      @media (min-width: 768px) {
+        .card_img_container {
+          height: 10rem;
+        }
+      }
+      .card_img {
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+      .card_title_container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+      }
+      .card_container:hover .card_img {
+        transform: scale(1.1);
+        transition-duration: 200m;
+      }
+      .card_title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(32, 29, 29);
+        line-height: 1.5rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .card_title:hover {
+        color: rgb(6, 6, 119);
+      }
+      .card_desc {
+        color: rgb(109, 108, 108);
+        font-size: 1rem;
+      }
+      .card_footer_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0.5rem;
+        margin: 1rem;
+
+      }
+
+      .author_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+      .author_avtar_container {
+        height: 2.5rem;
+        width: 2.5rem;
+        overflow: hidden;
+        border: 1px solid rgb(187, 181, 181);
+        border-radius: 50%;
+      }
+      .author_avtar {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+      .author_info_container {
+        display: flex;
+        flex-direction: column;
+        /* font-size: 0.8rem; */
+      }
+      .author_name {
+        color: rgb(8, 8, 171);
+      }
+      .author_date {
+        color: rgb(140, 139, 138);
+        font-size: 0.8rem;
+      }
+      .card_tag_container {
+        font-size: 0.79rem;
+        border: 1px solid rgb(111, 105, 105);
+        border-radius: 4px;
+        line-height: 1.3rem;
+        padding: 0.3rem 0.3rem;
+        color: rgb(50, 49, 49);
+      }
+    </style>
+  </head>
+  <body class="body_container">
+    <div class="container">
+      <header class="header_container">
+        <h1 class="title">Blog Template</h1>
+        <p class="description">
+          We continually monitor and optimize your campaigns to maximize results and ROI.
+        </p>
+      </header>
+
+      <main class="main_container">
+        <!-- card1 start -->
+
+        <div class="card_container">
+          <a href="#" class="card_img_container">
+            <img
+              src="../blog/assests/Social Media Marketing.jpg"
+              alt="card 1 image"
+              class="card_img"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2 class="card_title">Social Media Marketing</h2> </a>
+
+            <p class="card_desc">
+              Connect with your customers on social media and build a strong  online presence.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <div class="author_avtar_container">
+                <img
+                  src="../blog/assests/avtar.jpg"
+                  loading="lazy"
+                  class="author_avtar"
+                  alt="avtar 1"
+                />
+              </div>
+
+              <div class="author_info_container">
+                <span class="author_name"> John Doe </span>
+                <span class="author_date"> sept 19, 2021 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 1 ending -->
+
+        <!-- card2 start -->
+
+        <div class="card_container">
+          <a href="#" class="card_img_container">
+            <img
+              src="../blog/assests/seo.jpg"
+              alt="card 1 image"
+              class="card_img"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2 class="card_title">Search Engine Optimization</h2> </a>
+
+            <p class="card_desc">
+            Improve your Website search engine ranking and drive more organic traffic in your site.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <div class="author_avtar_container">
+                <img
+                  src="../blog/assests/avtar.jpg"
+                  loading="lazy"
+                  class="author_avtar"
+                  alt="avtar 1"
+                />
+              </div>
+
+              <div class="author_info_container">
+                <span class="author_name"> John Doe </span>
+                <span class="author_date"> sept 19, 2021 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 ending -->
+
+        <!-- card 3 start -->
+        <div class="card_container">
+          <a href="#" class="card_img_container">
+            <img
+              src="../blog/assests/content.jpg"
+              alt="card 1 image"
+              class="card_img"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2 class="card_title">Content Marketing</h2> </a>
+
+            <p class="card_desc">
+            Create valuable digital content that attracts and engages your target audience.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <div class="author_avtar_container">
+                <img
+                  src="../blog/assests/avtar.jpg"
+                  loading="lazy"
+                  class="author_avtar"
+                  alt="avtar 1"
+                />
+              </div>
+
+              <div class="author_info_container">
+                <span class="author_name"> John Doe </span>
+                <span class="author_date"> sept 19, 2021 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 ending -->
+
+        <!-- card 4 start -->
+
+        <div class="card_container">
+          <a href="#" class="card_img_container">
+            <img
+              src="../blog/assests/email.jpg"
+              alt="card 1 image"
+              class="card_img"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2 class="card_title">Email Marketing</h2> </a>
+
+            <p class="card_desc">
+              Reach your customers directly with targetted email campaigns and regular newsletter.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <div class="author_avtar_container">
+                <img
+                  src="../blog/assests/avtar.jpg"
+                  loading="lazy"
+                  class="author_avtar"
+                  alt="avtar 1"
+                />
+              </div>
+
+              <div class="author_info_container">
+                <span class="author_name"> John Doe </span>
+                <span class="author_date"> sept 19, 2021 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 4 ending -->
+
+        <!-- card 5 start -->
+        <div class="card_container">
+          <a href="#" class="card_img_container">
+            <img
+              src="../blog/assests/Développement web.jpg"
+              alt="card 1 image"
+              class="card_img"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2 class="card_title">Web Design & Optimization</h2> </a>
+
+            <p class="card_desc">
+              Create a proffesional and user-friendly website that helps you stand out from the competition.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <div class="author_avtar_container">
+                <img
+                  src="../blog/assests/avtar.jpg"
+                  loading="lazy"
+                  class="author_avtar"
+                  alt="avtar 1"
+                />
+              </div>
+
+              <div class="author_info_container">
+                <span class="author_name"> John Doe </span>
+                <span class="author_date"> sept 19, 2021 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 5 ending -->
+
+        <!-- card 6 start -->
+        <div class="card_container">
+          <a href="#" class="card_img_container">
+            <img
+              src="../blog/assests/analytics.jpg"
+              alt="card 1 image"
+              class="card_img"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2 class="card_title">Web Analytics & Reporting</h2> </a>
+
+            <p class="card_desc">
+           Help you set up and manage website analytics and provide regular reporting analysis for improvement.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <div class="author_avtar_container">
+                <img
+                  src="../blog/assests/avtar.jpg"
+                  loading="lazy"
+                  class="author_avtar"
+                  alt="avtar 1"
+                />
+              </div>
+
+              <div class="author_info_container">
+                <span class="author_name"> John Doe </span>
+                <span class="author_date"> sept 19, 2021 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 6 ending -->
+
+        <!-- card 7 start -->
+        <div class="card_container">
+          <a href="#" class="card_img_container">
+            <img
+              src="../blog/assests/cyber.jpg"
+              alt="card 1 image"
+              class="card_img"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2 class="card_title">Cyber Security</h2> </a>
+
+            <p class="card_desc">
+              Study the principles and practices of securing computer systems, networks, and data from cyber threats.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <div class="author_avtar_container">
+                <img
+                  src="../blog/assests/avtar.jpg"
+                  loading="lazy"
+                  class="author_avtar"
+                  alt="avtar 1"
+                />
+              </div>
+
+              <div class="author_info_container">
+                <span class="author_name"> John Doe </span>
+                <span class="author_date"> sept 19, 2021 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 7 ending -->
+
+        <!-- card 8 start -->
+        <div class="card_container">
+          <a href="#" class="card_img_container">
+            <img
+              src="../blog/assests/networking.jpg"
+              alt="card 1 image"
+              class="card_img"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2 class="card_title">Networking</h2> </a>
+
+            <p class="card_desc">
+              Learn about computer networks, network protocols, and cloud computing platforms like AWS, Azure or Google cloud.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <div class="author_avtar_container">
+                <img
+                  src="../blog/assests/avtar.jpg"
+                  loading="lazy"
+                  class="author_avtar"
+                  alt="avtar 1"
+                />
+              </div>
+
+              <div class="author_info_container">
+                <span class="author_name"> John Doe </span>
+                <span class="author_date"> sept 19, 2021 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 8 ending -->
+      </main>
+    </div>
+  </body>
+</html>
+
+<!--
+https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64
+https://source.unsplash.com/random/600x400?healthy -->
